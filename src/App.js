@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import Typography from '@mui/material/Typography'
+import Grid from '@mui/material/Grid'
+import QrCodeGenerator from './components/QrCodeGenerator'
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Grid
+      container
+      direction='column'
+      justifyContent='center'
+      alignItems='center'
+      sx={{ height: '100vh' }}
+    >
+      <Typography variant='h2' component='h1' sx={{ marginBottom: '3rem' }}>
+        Qr Code Generator
+      </Typography>
+      <QrCodeGenerator />
+    </Grid>
+  )
 }
 
-export default App;
+export default App
